@@ -64,44 +64,44 @@ df.head()
 ---
 📍 Step 2: Fix Column Names & Convert Date Format
 
-# Print actual column names to check for issues
+#Print actual column names to check for issues
 print("Column Names:", df.columns)
 
-# Trim spaces and rename the 'Date' column if necessary
+#Trim spaces and rename the 'Date' column if necessary
 df.rename(columns=lambda x: x.strip(), inplace=True)
 
-# If the column is named differently (e.g., ' date '), rename it explicitly
+#If the column is named differently (e.g., ' date '), rename it explicitly
 possible_date_columns = [col for col in df.columns if 'date' in col.lower()]
 if possible_date_columns:
     df.rename(columns={possible_date_columns[0]: 'Date'}, inplace=True)
 
-# Convert 'Date' column to proper datetime format
+#Convert 'Date' column to proper datetime format
 df['Date'] = pd.to_datetime(df['Date'], errors='coerce')
 
-# Sort data by Date
+#Sort data by Date
 df = df.sort_values(by='Date')
 
-# Display the first few rows to verify
+#Display the first few rows to verify
 df.head()
 
-# Print actual column names to check for issues
+#Print actual column names to check for issues
 print("Column Names:", df.columns)
 
-# Trim spaces and rename the 'Date' column if necessary
+#Trim spaces and rename the 'Date' column if necessary
 df.rename(columns=lambda x: x.strip(), inplace=True)
 
-# If the column is named differently (e.g., ' date '), rename it explicitly
+#If the column is named differently (e.g., ' date '), rename it explicitly
 possible_date_columns = [col for col in df.columns if 'date' in col.lower()]
 if possible_date_columns:
     df.rename(columns={possible_date_columns[0]: 'Date'}, inplace=True)
 
-# Convert 'Date' column to proper datetime format
+#Convert 'Date' column to proper datetime format
 df['Date'] = pd.to_datetime(df['Date'], errors='coerce')
 
-# Sort data by Date
+#Sort data by Date
 df = df.sort_values(by='Date')
 
-# Display the first few rows to verify
+#Display the first few rows to verify
 df.head()
 
 
