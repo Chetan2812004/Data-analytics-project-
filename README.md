@@ -1,8 +1,8 @@
 # Data-analytics-project-
-📌 #Adani Enterprises Stock Analysis Using Python, Excel & Power BI  
+📌 # Adani Enterprises Stock Analysis Using Python, Excel & Power BI  
 🔹 1. Introduction
 
- #📍 Objective:
+ 📍# Objective:
 
 The goal of this project is to analyze the stock performance of Adani Enterprises using historical stock market data. The analysis is performed using:
 
