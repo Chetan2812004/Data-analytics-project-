@@ -1,5 +1,5 @@
 # Data-analytics-project-
-📌 #Adani Enterprises Stock Analysis Using Python, Excel &amp; Power BI  
+📌 #Adani Enterprises Stock Analysis Using Python, Excel & Power BI  
 🔹 1. Introduction
 
  #📍 Objective:
@@ -40,6 +40,25 @@ Before analysis, the dataset was cleaned using Excel, with the following steps:
 ✔ Ensured correct date format for accurate time-series analysis.
 ✔ Checked for outliers using filtering techniques.
 ✔ Saved the cleaned dataset as an Excel file (cleaned_adani_stock.xlsx).
+
+
+
+📍 Step 1: Mount Google Drive & Load Data
+
+# Mount Google Drive
+from google.colab import drive
+drive.mount('/content/drive')
+
+# Import necessary libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load cleaned Excel file
+file_path = "/content/drive/My Drive/cleaned_adani_stock.xlsx"  # Update with your actual file path
+df = pd.read_excel(file_path)
+
+# Display first few rows
+df.head()
 
 
 ---
