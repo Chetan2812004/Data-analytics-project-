@@ -45,19 +45,19 @@ Before analysis, the dataset was cleaned using Excel, with the following steps:
 
 📍 Step 1: Mount Google Drive & Load Data
 
-# Mount Google Drive
+#Mount Google Drive
 from google.colab import drive
 drive.mount('/content/drive')
 
-# Import necessary libraries
+#Import necessary libraries
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Load cleaned Excel file
+#Load cleaned Excel file
 file_path = "/content/drive/My Drive/cleaned_adani_stock.xlsx"  # Update with your actual file path
 df = pd.read_excel(file_path)
 
-# Display first few rows
+#Display first few rows
 df.head()
 
 
