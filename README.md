@@ -108,6 +108,12 @@ if 'Close' not in df.columns:
     else:
         raise KeyError("Could not find a column representing closing price. Please check your data.")
 
+🔹 4. Exploratory Data Analysis (EDA)
+
+EDA helps to understand trends, patterns, and relationships in the dataset.
+
+📍 1. Stock Price Trend Over Time
+
 #Plot the stock closing price trend
 
 plt.figure(figsize=(12, 6))
@@ -120,8 +126,6 @@ plt.grid()
 plt.show()
 
 
-#--- Modification starts here ---
-
 #Check for volume column name (case-insensitive)
 
 volume_column = next((col for col in df.columns if 'volume' in col.lower()), None)
@@ -133,8 +137,7 @@ if volume_column:
 else:
     raise KeyError("Could not find a column representing volume. Please check your data.")
 
-#--- Modification ends here ---
-
+📍 2. Trading Volume Analysis
 
 plt.figure(figsize=(12, 6))
 plt.bar(df['Date'], df['Volume'], color='purple', label='Trading Volume')  # Now use 'Volume'
@@ -144,11 +147,11 @@ plt.title('Adani Enterprises Trading Volume')
 plt.legend()
 plt.show()
 
+📍 3. Moving Averages (SMA & EMA)
 
 #Calculate 20-day and 50-day moving averages
 df['SMA_20'] = df['Close'].rolling(window=20).mean() # Now uses 'Close' if it exists or the renamed column
 df['SMA_50'] = df['Close'].rolling(window=50).mean() # Now uses 'Close' if it exists or the renamed column
-
 
 #Plot Moving Averages
 plt.figure(figsize=(12, 6))
